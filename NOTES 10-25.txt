@@ -1,0 +1,9 @@
+For animation to bring down website main div with each link selection:
+
+
+Where I am at currently:
+*messed up the options by removing div as a child on the main block [done]
+* stucture is more or less finished, need to focus on the content to fill each page with
+* still want to look into the option box animations [isolate this components to work on]
+    - [clicked box moves down then expands ]
+    - v2: clicked box just expands over the other options and inverts the colors of other clickable options
