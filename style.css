@@ -1,25 +1,21 @@
-/*
-consider deleteing below if there is unexpected behavior
-*/
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 html{
     scroll-behavior: smooth;
 }
-body{
+.main-body{
     margin: 0;
     padding: 0;
     background-color: slategray;
 }
-footer{
+.footer{
     background-color: black;
     border: solid brown;
     color: white;
     text-align: center;
+    height: 4vh;
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
 }
 embed{
 }
@@ -31,8 +27,8 @@ embed{
     align-items: center;
     text-align: center;
     border: dotted green;
-    color: white;
     padding-top: 10px;
+    color: red;
 }
 .main-block{
     background-color: tan;
@@ -53,7 +49,25 @@ embed{
     animation-fill-mode: forwards;
     */
 }
-
+.intro-p::before{
+    content: 'First Generation College Graduate';
+    display: block;
+    font-size:x-large;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+.intro-p{
+    border: solid greenyellow; 
+    font-size:xx-large; 
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.intro-p::after{
+    content: 'Volunteer Educational CS instructor for middle school students';
+    display: block;
+    font-size: x-large;
+}
 .options{
     border: dotted blueviolet;
     position: relative;
@@ -107,6 +121,7 @@ embed{
     margin-bottom: 25px;
     padding: 15px;
     outline: dotted yellow;
+    display: none;
 
     /*insert keyframe animation here:
     * text flow fades into page 
