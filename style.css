@@ -49,24 +49,31 @@ embed{
     animation-fill-mode: forwards;
     */
 }
-.intro-p::before{
-    content: 'First Generation College Graduate';
+.intro-p.before{
+    /*content: 'First Generation College Graduate';*/
     display: block;
-    font-size:x-large;
-    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
     font-weight: bolder;
+
+    animation: fade-in 1s forwards;
+    animation: move-right 1s forwards;
 }
 .intro-p{
-    border: solid greenyellow; 
     font-size:xx-large; 
     text-align: center;
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
 }
-.intro-p::after{
-    content: 'Volunteer Educational CS instructor for middle school students';
+.intro-p.main{
+    animation: fade-in 1.5s forwards;
+}
+.intro-p.after{
     display: block;
     font-size: x-large;
+
+        
+    animation: fade-in 1s forwards;
+    animation: move-left 1s forwards;
 }
 .options{
     border: dotted blueviolet;
@@ -93,8 +100,7 @@ embed{
 }
 .btn.bt1{
     /*
-    animation: btn-animation 2s;
-    animation-fill-mode: forwards;
+    animation: btn-expand 1s forwards;
     */
 }
 .btn:hover{
@@ -129,7 +135,7 @@ embed{
     * when other button is clicked, scolls/fades left or right then fades to correct page content [requires]
     */
 
-    animation: info-fade 2s;
+    animation: fade-in 2s;
     animation-fill-mode: forwards;
 
 }
@@ -151,22 +157,40 @@ embed{
     }
 }
 
-@keyframes info-fade{
+@keyframes fade-in{
     from{
         opacity: 0%;
-        margin-top: 50px;
+        
     }
     to{
         opacity: 100%;
-        margin-top: 25px;
     }
 }
 
-@keyframes btn-animation{
+@keyframes move-right{
     from{
-        top:0px;
+        transform: translateX(-150px);
     }
     to{
-        top: 50px;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes move-left{
+    from{
+        transform: translateX(150px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes btn-expand{
+    from{
+        transform: translateY(0px);
+
+    }
+    to{
+        transform: translateY(25px);
     }
 }

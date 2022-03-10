@@ -20,12 +20,14 @@
 
         <div class="profile">
             <img src="ofo.png" alt="OFO" id="profile-pic">
-            <p class="intro-p">Aspiring Web Deveopler</p>
+            <p class="intro-p before">First Generation College Graduate</p>
+            <p class="intro-p main" >Aspiring Web Deveopler</p>
+            <p class="intro-p after">Volunteer Educational CS instructor for middle school students</p>
         </div>
 
 
         <div class="options">
-            <button type="button" class="btn bt1" id="aboutMe" onclick="showAM()">About Me</button>
+            <button type="button" class="btn" id="aboutMe" onclick="showAM()">About Me</button>
             <button type="button" class="btn" id="resume" onclick="showRes()" >Resume</button>
             <button type="button" class="btn" id="projects" onclick="showProj()">Projects</button>
             <button type="button" class="btn" id="socials" onclick="showSoc()">Socials</button>
@@ -69,6 +71,8 @@
             document.getElementById("projectsDiv").style.display = "none";
             document.getElementById("socialsDiv").style.display = "none";
 
+            document.getElementById("aboutMe").className = "btn bt1";
+
             document.getElementById("aboutMe").scrollIntoView();
             
         }
@@ -81,6 +85,8 @@
             document.getElementById("socialsDiv").style.display = "none";
 
             document.getElementById("resume").scrollIntoView();
+
+            document.getElementById("aboutMe").className = "btn";
 
         }
 
@@ -104,6 +110,7 @@
 
 
         }
+
     </script>
 
 
